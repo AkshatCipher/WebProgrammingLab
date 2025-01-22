@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #022057;
+    overflow: hidden;
+  }
+  
+  .ball {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #00ff95;
+    position: absolute;
+    animation: bounce 2s ease-in-out infinite;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    background-color: #ff6347;
+    position: absolute;
+    animation: rotateSquare 4s linear infinite;
+  }
+  
+  /* Bouncing ball animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0) scale(1) rotate(0deg);
+    }
+    30% {
+      transform: translateY(-150px) scale(1.1) rotate(90deg);
+    }
+    50% {
+      transform: translateY(0) scale(1) rotate(180deg);
+    }
+    70% {
+      transform: translateY(-80px) scale(1.05) rotate(270deg);
+    }
+    100% {
+      transform: translateY(0) scale(1) rotate(360deg);
+    }
+  }
+  
+  /* Rotating square animation */
+  @keyframes rotateSquare {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
